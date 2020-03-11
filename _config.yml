@@ -3,7 +3,7 @@
 # Site wide configuration
 ####################################
 #
-title: CLUE's
+title: Clue's Blog
 email:
 description: To be a data scientist
 url: https://givitallugot.github.io/
@@ -33,10 +33,10 @@ kramdown:
 ####################################
 #
 owner:
-  name: CLUE's
-  avatar: leonids-logo.png
-  job: "Future Data Scientist"
-  bio: "Give it all you got"
+  name: CLUE
+  avatar: blog-logo1.png
+  job: Future Data Scientist
+  bio: 
   email:
   disqus-shortname:
   twitter: #username
@@ -51,10 +51,10 @@ owner:
   github: givitallugot
   gitlab: #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
+  linkedin: #Sun-mi Ju
   skype: #username
   xing: #username
-  instagram: #username
+  instagram: #sunmii_0.o
   lastfm: #username
   tumblr: #username
   pinterest: #username

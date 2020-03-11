@@ -33,11 +33,11 @@
     display: block;
     color: #F36170;
     font-size: 1.75em;
-    text-transform: lowercase;
+    text-transform: uppercase;
   }
   .author_job {
     display: block;
-    color: $secondary;
+    color: #808080;
     font-size: 0.8em;
     font-weight: 700;
     text-transform: uppercase;
@@ -76,6 +76,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  color: $secondary;
   .nav-item {
     display: inline-block;
     *display: inline;

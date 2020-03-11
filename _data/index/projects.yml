@@ -1,4 +1,19 @@
-- name: leonids
-  descr: "Bacon ipsum dolor sit amet doner meatball jowl short ribs, chicken prosciutto salami frankfurter. Pig drumstick turducken short ribs, brisket meatloaf ham hock shankle andouille corned beef strip steak. Venison ham bresaola strip steak. Pork belly ribeye prosciutto t-bone."
-  image: pong.png
-  github: https://github.com/renyuanz/leonids
+- name: Web Development Team Project
+  descr: "Simple movie information web page implemented mySQL on 'Database Application' Class. Used HTML, CSS, Nodejs, mySQL codes to development."
+  image: #pong.png
+  github: https://github.com/givitallugot/2019-DBWEB-Team-Project
+
+- name: SAS Analytics Championship
+  descr: "Analysis of home shopping broadcasting and forcast of sales."
+  image: 
+  website: https://www.sas-analytics.co.kr
+
+- name: Multivariate Analysis Team Project
+  descr: "Analysis of Gallup Happiness data set with multivariance modeling techniques on 'Multivariate Data Analysis' Class."
+  image: 
+  github: https://github.com/givitallugot/2019-MV-Team-Project
+
+- name: Database Team Project
+  descr: "Analysis of trade area around Sinchon and establishes a database system after selecting start-up items."
+  image: 
+  github: https://github.com/givitallugot/2019-DB-Team-Project
