@@ -50,7 +50,7 @@ library(ggiraphExtra)
 ggChoropleth(data=crime, aes(fill=Murder, map_id=state), map=states_map)
 {% endhighlight %}  
 
-![1-map1](/!contents_plot/2020-03-09-2.jpg){: width="60%"}  
+![1-map1](/!contents_plot/2020-03-09-2.JPG){: width="60%"}  
 <br><br><br>
 
 `fill=Murder`를 통해 수치에 따라 색의 진하기가 다르게 나타납니다. 기본 그림도 나쁘지 않지만 위도와 경도축의 값들은 사실상 필요 없어서 `ggthemes` 패키지를 이용하여 배경을 깔끔히 변경해보았습니다.
@@ -61,7 +61,7 @@ ggChoropleth(data=crime, aes(fill=Murder, map_id=state), map=states_map) +
   theme_map() + theme(legend.position="right")
 {% endhighlight %}  
 
-![1-map2](/!contents_plot/2020-03-09-3.jpg){: width="60%"}  
+![1-map2](/!contents_plot/2020-03-09-3.JPG){: width="60%"}  
 <br><br><br>
 
 `interactive=T`를 추가해서 커서를 지도 위에 두면 해당 주에 대한 정보를 확인할 수 있습니다. 이는 시각화 해석 시 굉장히 유용합니다. 다만, theme이 있을 때는 적용되지 않아 기본 그림에 옵션을 추가해 보았습니다.
@@ -99,7 +99,7 @@ devtools::install_github("hrbrmstr/albersusa")
 
 만약 다음과 같이 에러가 출력되는 경우 [rtools link][rtools-site]에서 recommended 버전의 `Rtools`를 설치해줍니다. 이는 컴파일 시 `Rtools`가 필요하기 때문입니다. 만약 `Rtools` 다운 후에도 폴더에 설치할 수 없다는 에러가 발생한다면 관리자 권한으로 Rstudio를 재실행한 후 시도하면 됩니다.
 
-![error1](/!contents_plot/2020-03-09-1.jpg){: width="70%"}  
+![error1](/!contents_plot/2020-03-09-1.JPG){: width="70%"}  
 <br><br><br><br>
 
 `alberusea` 패키지를 import하여 미국 지리 정보를 us 변수로 불러옵니다. 그리고 `ggmap` 패키지의 `fortify()` 함수를 이용하여 우리가 알 수 있는 좌표계로 변경하고 us_map 변수로 저장합니다.
@@ -138,7 +138,7 @@ head(us_map_crime)
 ggplot() + geom_map(data=us_map_crime, map=us_map, aes(x=long, y=lat, map_id=id), color="#2b2b2b", size=0.1, fill=NA)
 {% endhighlight %}
 
-![2-map1](/!contents_plot/2020-03-09-5.jpg){: width="60%"}  
+![2-map1](/!contents_plot/2020-03-09-5.JPG){: width="60%"}  
 <br><br><br><br>
 
 **Alaska, Hawaii**가 미국 대륙 왼쪽 아래에 나타납니다. `fill=Murder`로 채색합니다.
@@ -150,7 +150,7 @@ ggplot() + geom_map(data=us_map_crime, map=us_map, aes(x=long, y=lat, map_id=id,
   theme(panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), panel.grid.minor.y = element_blank(), plot.title = element_text(face = "bold", size = 14, hjust = 0.5))
 {% endhighlight %}
 
-![2-map2](/!contents_plot/2020-03-09-6.jpg){: width="60%"}
+![2-map2](/!contents_plot/2020-03-09-6.JPG){: width="60%"}
 
 * ggplot 코드: plot에 기본 틀을 넣고 ggplot의 여러 함수로 세부 옵션 조정. scale_fill_gradient()를 통해 숫자가 높으면 진한 색, 숫자가 낮으면 연한 색으로 구분할 수 있도록 변경, theme_bw()로 뒷배경 제거, labs()로 제목 추가, theme()으로 plot의 기본 격자 제거  
 <br><br><br><br>
@@ -162,7 +162,7 @@ ggplot() + geom_map(data=us_map_crime, map=us_map, aes(x=long, y=lat, map_id=id,
   coord_map("albers", lat0=30, lat1=40)
 {% endhighlight %}
 
-![2-map3](/!contents_plot/2020-03-09-7.jpg){: width="60%"}  
+![2-map3](/!contents_plot/2020-03-09-7.JPG){: width="60%"}  
 <br><br><br><br>
 
 이제 `Conic projections` 좌표계에 지도를 사영한 모습을 볼 수 있습니다. 지금부터 내용은 시각화를 다듬는 방법이니 참고하시고 다양한 활용을 해보시면 좋겠습니다.
@@ -175,7 +175,7 @@ ggplot() + geom_map(data=us_map_crime, map=us_map, aes(x=long, y=lat, map_id=id,
   theme(panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), panel.grid.minor.y = element_blank(), plot.title = element_text(face = "bold", size = 14, hjust = 0.5))
 {% endhighlight %}
 
-![2-map4](/!contents_plot/2020-03-09-8.jpg){: width="60%"}  
+![2-map4](/!contents_plot/2020-03-09-8.JPG){: width="60%"}  
 <br><br><br><br>
 
 {% highlight R %}
@@ -187,7 +187,7 @@ ggplot() + geom_map(data=us_map_crime, map=us_map, aes(x=long, y=lat, map_id=id,
   theme_map() + scale_fill_viridis(name="murder (1973)") + theme(legend.position="right")
 {% endhighlight %}
 
-![2-map5](/!contents_plot/2020-03-09-9.jpg){: width="60%"}  
+![2-map5](/!contents_plot/2020-03-09-9.JPG){: width="60%"}  
 
 * `viridis` 패키지와 `theme_map()` 함수로 매우 깔끔한 그림이나 오히려 범죄율이 심각할수록 색이 옅어져 오히려 해석이나 발표 자료로는 적합하지 않을 수도 있겠네요.  
 <br><br><br><br>
