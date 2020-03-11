@@ -7,7 +7,8 @@ title: Clue's Blog
 email:
 description: To be a data scientist
 url: https://givitallugot.github.io/
-keywords: ["blog", "jekyll"]
+keywords: ["blog", "data scientist", "R", "Python", "data mining", "visualization"]
+# ["blog", "jekyll"]
 
 #
 ###################################
@@ -38,7 +39,7 @@ owner:
   job: Future Data Scientist
   bio: 
   email:
-  disqus-shortname:
+  disqus-shortname: https-givitallugot-github-io
   twitter: #username
   facebook: #username
   google:
