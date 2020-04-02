@@ -16,13 +16,13 @@ comments: true
 <br><br>
 
 다음 포스팅 내용을 바로 확인하고 싶다면 클릭하세요!  <br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[>> (포스팅 예정) 전처리 파이프라인 만들기 2 (연속형 변수)][next-2]  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[>> 전처리 파이프라인 만들기 2 (연속형 변수)][next-2]  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[>> (포스팅 예정) 전처리 파이프라인 만들기 3 (범주형 변수 및 최종 합치기)][next-3]  
 <br><br><br><br>
 
 ### 데이터셋 확인
 
-Kaggle [data-link][data-set]를 통해 다운받은 `housing`은 워싱턴에서 가장 인구가 많은 군인 King County의 주택 정보와 가격이 포함된 데이터셋으로 2014년 5월부터 2015년 5월까지 거래된 정보를 바탕으로 합니다. 데이터셋을 읽어 들여봅시다.   
+Kaggle [data-link][data-set]를 통해 다운받은 `housing`은 워싱턴에서 가장 인구가 많은 군인 King County의 주택 정보와 가격이 포함된 데이터셋으로 2014년 5월부터 2015년 5월까지 거래된 정보를 바탕으로 합니다. 데이터셋을 읽어봅시다.   
 
 {% highlight Python %}
 import pandas as pd
@@ -41,7 +41,7 @@ housing.head()
 housing.info()
 {% endhighlight %}  
 
-NA가 없는 매우 깨끗한 데이터로 대부분 `int`나 `float`로 연속형 변수이며 `date`는 `obect`형입니다. `describe()`를 통해 확인해보면 `waterfront`는 0과 1이므로 범주형 `binary`로 보는 것이 적당할 것 같습니다.  
+NA가 없는 매우 깨끗한 데이터로 대부분 `int`나 `float`로 연속형 변수이며 변수 `date`는 `obect`형입니다. `describe()`를 통해 확인해보면 `waterfront`는 현재 `int`이지만 값의 범위가 0과 1뿐이므로 범주형 `binary`로 보는 것이 적당할 것 같습니다.  
 <br><br><br><br>
 
 ### 훈련 & 테스트셋 나누기
@@ -162,7 +162,7 @@ scatter_matrix(housing[attributes], figsize=(12,8))
 
 <br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [>> (포스팅 예정) 전처리 파이프라인 만들기 2 (연속형 변수)][next-2]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [>> 전처리 파이프라인 만들기 2 (연속형 변수)][next-2]
 
 [data-set]: https://www.kaggle.com/harlfoxem/housesalesprediction
 [var-info-table]: https://www.slideshare.net/PawanShivhare1/predicting-king-county-house-prices
