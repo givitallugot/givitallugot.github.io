@@ -20,6 +20,7 @@ comments: true
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [>> 전처리 파이프라인 만들기 1][next-1]
 <br><br><br><br>
 
+### 연속형 변수를 위한 파이프라인
 연속형 파이프라인을 생성하기 전에 훈련셋의 X와 Y를 housing과 housing_label로 분리합니다.
 
 {% highlight Python %}
@@ -112,7 +113,7 @@ class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
 {% endhighlight %}  
 <br><br><br><br>
 
-다음으로 3. 전처리를 수행하려고 합니다. 다만 모든 연속형 변수의 `min-max` 변환은 따로 클래스를 생성하지 않아도 됩니다. 왜냐하면 이미 구현된 `StandardScaler` 클래스가 있기 때문이죠. 이를 사용하니 매우 편리하죠?  
+다음으로 3. 전처리를 수행하려고 합니다. 다만 모든 연속형 변수의 `min-max` 변환은 따로 클래스를 생성하지 않아도 됩니다. 왜냐하면 이미 구현된 `StandardScaler` 클래스가 있기 때문이죠. 이를 사용하면 매우 편리합니다.  
 <br><br><br><br>
 
 이렇게 연속형 변수의 전처리 노드를 모두 생성했습니다. 이제 이 노드들로 구성된 파이프라인을 구현하면 됩니다. 앞에서 잠깐 확인했던 것처럼 `num_pipeline`을 정의합니다. 사이킷런의 `Pipeline`을 이용하여 클래스들과 각각에 맞는 이름(`selector`, `attribs_adder`, `std_scaler`)을 적고 노드를 연결한다는 느낌으로 연속형 파이프라인이 구성됩니다. 
@@ -134,7 +135,7 @@ num_pipeline = Pipeline([
 연속형 변수를 위한 전처리 파이프라인이 완성되었습니다. 이제 범주형 전처리 파이프라인도 처리해야겠죠? 다음 포스팅에서 범주형 전처리 파이프라인과 최종 파이프라인을 구현해보도록 할게요!  
 <br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [>> (포스팅 예정) 전처리 파이프라인 만들기 3 (범주형 변수 및 최종 합치기)][next-3]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [>> 전처리 파이프라인 만들기 3 (범주형 변수 및 최종 합치기)][next-3]
 
 
 [next-1]: https://givitallugot.github.io/articles/2020-03/Python-preprocessing-1-pipe1
