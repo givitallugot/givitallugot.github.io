@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Python/Jupyter] 전처리 파이프라인 만들기 3 (범주형 변수 및 최종 합치기) with sklearn pipeline processing StandardScaler OneHotEncoder"
-date:   2020-03-31 15:10:48
+date:   2020-05-31 15:10:48
 categories: [Preprocessing]
 comments: true
 ---
@@ -48,7 +48,7 @@ class LevelChanger(BaseEstimator, TransformerMixin):
 회귀분석에서는 **# of levels - 1**로 범주형 설명변수 개수를 지정합니다. 그러나 머신러닝에서는 **# of levels**로 설명변수의 개수를 지정하는 경우가 있는데, 예를 들어 `renovated` 한 변수에서 `yes`와 `no`를 **1**과 **0**으로 구분하는 것이 아닌, `renovated_yes`, `renovated_no` 두 변수를 만들어서 각 변수가 `yes` 또는 `no`를 의미하도록 하는 것입니다. 이를 위한 인코딩은 사이킷런의 `OneHotEncoder`를 이용하면 됩니다.
 <br><br><br><br>
 
-이제 범주형 파이프라인 `cat_pipeline`을 다음과 같이 정의합니다. 연속형 파이프라인 'num_pipeline'과 비슷하게 사이킷런의 `Pipeline`을 이용하여 클래스들과 각각에 맞는 이름(`selector`, `level`, `cat_encoder`)을 적고 노드를 연결합니다.
+이제 범주형 파이프라인 `cat_pipeline`을 다음과 같이 정의합니다. 연속형 파이프라인 'num_pipeline'과 비슷하게 사이킷런의 `Pipeline`을 이용하여 클래스들과 각각에 맞는 이름(`selector`, `level`, `cat_encoder`)을 적고 노드를 연결합니다. 이때 `Pipeline`은 연속된 변환을 순서대로 처리할 수 있도록 돕는 클래스입니다.
 
 {% highlight Python %}
 from sklearn.preprocessing import OneHotEncoder
