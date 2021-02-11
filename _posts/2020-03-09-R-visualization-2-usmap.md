@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[R/RStudio] R을 이용한 미국 지도 시각화 with ggiraphExtra ggplot2 ggmaps ggthemes albersusa viridis packages"
+title:  "[R] R을 이용한 미국 지도 시각화 with ggiraphExtra ggplot2 ggmaps ggthemes albersusa viridis packages"
 date:   2020-03-09 17:35:12
 categories: [Visualization]
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[R/RStudio] R을 이용한 서울시 지도 시각화 with ggplot2 ggmap raster rgeos maptools rgdal packages"
+title:  "[R] R을 이용한 서울시 지도 시각화 with ggplot2 ggmap raster rgeos maptools rgdal packages"
 date:   2020-03-06 13:07:19
 categories: [Visualization]
 comments: true

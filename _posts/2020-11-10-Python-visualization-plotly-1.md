@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Python/Jupyter] Hover기능을 이용한 인터렉티브한 iris 데이터 산점도 시각화 with plotly"
+title:  "[Python] Hover기능을 이용한 인터렉티브한 iris 데이터 산점도 시각화 with plotly"
 date:   2020-11-09 15:52:20
 categories: [Visualization]
 comments: true

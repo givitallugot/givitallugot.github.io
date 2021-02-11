@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Python/Jupyter] 확률적 경사 하강법 Stochastic Gradient Descent / 미니 배치 경사 하강법 Minibatch Gradient Descent 정리"
+title:  "[Python] 확률적 경사 하강법 Stochastic Gradient Descent / 미니 배치 경사 하강법 Minibatch Gradient Descent 정리"
 date: 2020-07-20 18:56:37
 categories: [Machine Learning]
 comments: true

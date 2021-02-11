@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Python/Jupyter] 경사 하강법 Gradient Descent / 배치 경사 하강법 Batch Gradient Descent 정리"
+title:  "[Python] 경사 하강법 Gradient Descent / 배치 경사 하강법 Batch Gradient Descent 정리"
 date: 2020-07-15 23:02:57
 categories: [Machine Learning]
 comments: true

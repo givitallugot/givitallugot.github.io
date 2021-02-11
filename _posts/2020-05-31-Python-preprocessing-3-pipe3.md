@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Python/Jupyter] 전처리 파이프라인 만들기 3 (범주형 변수 및 최종 합치기) with sklearn pipeline processing StandardScaler OneHotEncoder"
+title:  "[Python] 전처리 파이프라인 만들기 3 (범주형 변수 및 최종 합치기) with sklearn pipeline processing StandardScaler OneHotEncoder"
 date:   2020-05-31 15:10:48
 categories: [Preprocessing]
 comments: true

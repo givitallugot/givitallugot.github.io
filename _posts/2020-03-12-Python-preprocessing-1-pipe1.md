@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Python/Jupyter] 전처리 파이프라인 만들기 1 (훈련&테스트셋, 데이터셋 탐색) with sklearn pipeline processing StandardScaler OneHotEncoder"
+title:  "[Python] 전처리 파이프라인 만들기 1 (훈련&테스트셋, 데이터셋 탐색) with sklearn pipeline processing StandardScaler OneHotEncoder"
 date:   2020-03-12 11:03:47
 categories: [Preprocessing]
 comments: true
