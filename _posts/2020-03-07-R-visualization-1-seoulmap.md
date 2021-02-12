@@ -127,19 +127,21 @@ ggplot() + geom_polygon(data = P_merge, aes(x=long, y=lat, group=group), fill = 
 ggplot() + geom_polygon(data = P_merge, aes(x=long, y=lat, group=group, fill = A))
 {% endhighlight %}  
 
-![map_of_A](/!contents_plot/2020-03-07-3.jpg){: width="50%"}  
+![map_of_A](/!contents_plot/2020-03-07-3.jpeg){: width="50%"}  
 <br><br><br>
 
 이제부터 ggplot을 활용하여 지도를 변형하시면 됩니다. 다음 코드도 참고해보세요.
 
 {% highlight R %}
+# 맥 사용자라면 theme_set(theme_bw(base_family='NanumGothic')) 를 먼저 수행하고, 대신 + theme_bw() 코드를 제거하고 수행하세요.
+
 plot <- ggplot() + geom_polygon(data = P_merge, aes(x=long, y=lat, group=group, fill = A))
 plot + scale_fill_gradient(low = "#ffe5e5", high = "#ff3232", space = "Lab", guide = "colourbar") 
      + theme_bw() + labs(title = "서울시 A 분포") 
      + theme(panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), panel.grid.minor.y = element_blank(), plot.title = element_text(face = "bold", size = 18, hjust = 0.5))
 {% endhighlight %}  
 
-![map_of_A](/!contents_plot/2020-03-07-4.jpg){: width="50%"}  
+![map_of_A](/!contents_plot/2020-03-07-4.jpeg){: width="50%"}  
 
 * ggplot 코드: plot에 기본 틀을 넣고 ggplot의 여러 함수로 세부 옵션 조정. scale_fill_gradient()를 통해 숫자가 높으면 진한 색, 숫자가 낮으면 연한 색으로 구분할 수 있도록 변경, theme_bw()로 뒷배경 제거, labs()로 제목 추가, theme()으로 plot의 기본 격자 제거  
 <br><br><br><br>
@@ -147,13 +149,15 @@ plot + scale_fill_gradient(low = "#ffe5e5", high = "#ff3232", space = "Lab", gui
 B에 대한 plot도 그려보시면 A와 B의 색이 진한 부분과 연한 부분이 달라 분포의 차이가 확연히 들어옵니다.
 
 {% highlight R %}
+# 맥 사용자라면 theme_set(theme_bw(base_family='NanumGothic')) 를 먼저 수행하고, 대신 + theme_bw() 코드를 제거하고 수행하세요.
+
 plot <- ggplot() + geom_polygon(data = P_merge, aes(x=long, y=lat, group=group, fill = B))
 plot + scale_fill_gradient(low = "#ffffe5", high = "#ffb825", space = "Lab", guide = "colourbar") 
      + theme_bw() + labs(title = "서울시 B 분포") 
      + theme(panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), panel.grid.minor.y = element_blank(), plot.title = element_text(face = "bold", size = 18, hjust = 0.5))
 {% endhighlight %}  
 
-![map_of_A](/!contents_plot/2020-03-07-5.jpg){: width="50%"}  
+![map_of_A](/!contents_plot/2020-03-07-5.jpeg){: width="50%"}  
 
 색을 조정하는 방법은 굉장히 많으니 다양한 방법을 시도해보시면 좋겠습니다 :)
 

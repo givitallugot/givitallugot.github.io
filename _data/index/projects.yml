@@ -1,3 +1,13 @@
+- name: Selected Topics in Data Analysis Ⅱ Project
+  descr: "Classification mushroom data using machine learning and covid-19 data using deep learning."
+  image: #pong.png
+  github: https://github.com/givitallugot/2020-COVID19-Classification-Project
+
+- name: Bigcontest Grand Prize
+  descr: "A member of '이스탯' that won grand prize on innovation field."
+  image: #pong.png
+  github: https://github.com/givitallugot/2020-BIGCONTEST-ESTAT
+
 - name: Web Development Team Project
   descr: "Simple movie information web page implemented mySQL on 'Database Application' Class. Used HTML, CSS, Nodejs, mySQL codes to development."
   image: #pong.png
