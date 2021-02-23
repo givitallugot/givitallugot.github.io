@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Python] Kaggle Mushroom Data Classification (캐글 버섯 데이터 분류) with 7 Machine Learning methods (머신러닝 프로젝트 메뉴얼)"
+title:  "[Python] Kaggle Mushroom Data Classification (캐글 버섯 데이터 분류) with 7 Machine Learning methods (머신러닝 프로젝트 매뉴얼)"
 date:   2021-02-12 00:35:37
 categories: [Machine Learning]
 comments: true
@@ -248,7 +248,7 @@ error_result_check(rf, X_train, y_train)
 ![slide-6](/!contents_plot/2021-02-13-mushroom-6.jpeg){: width="60%"}
 <br>
 
-앞에서 매우 높은 정확도를 보였기 때문에, 계산량을 줄이고 모델을 간결하게 만들어보고자 축차적으로 줄였다. 그 결과, 5개 `‘gill-size’, ‘ordor’, ‘bruises’, ‘ring-type’, ‘spore-print-color’` 변수로 충분히 잘 적합됨을 확인할 수 있다. 사용한 모델은 `Logistic Regression, Decision Tree, Random Forest, XGBoost, LightGBM, KNN, SVC`이며, 이 7개 모델 비교한 결과이다.
+앞에서 매우 높은 정확도를 보였기 때문에, 계산량을 줄이고 모델을 간결하게 만들어보고자 축차적으로 줄였다. 그 결과, 5개 `gill-size, ordor, bruises, ring-type, spore-print-color` 변수로 충분히 잘 적합됨을 확인할 수 있다. 사용한 모델은 `Logistic Regression, Decision Tree, Random Forest, XGBoost, LightGBM, KNN, SVC`이며, 이 7개 모델 비교한 결과이다.
 <br>
 
 {% highlight Python %}
