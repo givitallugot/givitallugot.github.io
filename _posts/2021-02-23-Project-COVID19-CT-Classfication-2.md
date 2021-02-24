@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Python] Kaggle COVID-19 CT image Classification 2 (폐 CT로 코로나 감염 여부 분류) with CNN, Inception V3 (딥러닝 프로젝트 매뉴얼 2)"
-date:   2021-02-23 20:14:13
+date:   2021-02-24 02:14:13
 categories: [Deep Learning]
 comments: true
 ---
@@ -89,7 +89,7 @@ model2.compile(optimizer=optimizers.Adam(learning_rate=1e-4), # 'rmsprop',
                loss='binary_crossentropy',
                metrics=['acc'])
 
-history2 = model2.fit_generator(train_generator, steps_per_epoch=15, epochs=10, validation_data = validation_generator, validation_steps = 1) # , validation_data = validation_generator, validation_steps = 10
+history2 = model2.fit_generator(train_generator, steps_per_epoch=15, epochs=10, validation_data = validation_generator, validation_steps = 1)
 
 # 결과 및 시각화 코드는 앞 포스팅 참고
 {% endhighlight %}
@@ -371,7 +371,7 @@ history4 = model4.fit_generator(train_generator, steps_per_epoch=15, epochs=10, 
 ![slide-8](/!contents_plot/2021-02-23-covid19-8.jpeg){: width="60%"}
 <br>
 
-마지막으로 `Test Accuracy`를 조금 더 향상시키기 위해 `Reduced Inception V3` 모델을 시도했다. `Inception V3`는 구글넷에 기반이 되는 모델이기도 하하며 구조는 위와 같다. 3번의 반복으로도 앞의 모델보다 `Test Accuracy`에 향상이 나타나고, 그 이상 반복하면 `Validation Accuracy`는 1에 수렴한다. `X-ray classification`에서도 사용되는 모델이며, 흑백 이미지 분류에 많이 사용한다. 파라미터도 앞의 모델에 비해 많이 증가하지 않아 해당 모델을 최적 모형으로 선택한다. 특히 `Reduced 
+마지막으로 `Test Accuracy`를 조금 더 향상시키기 위해 `Reduced Inception V3` 모델을 시도했다. `Inception V3`는 구글넷에 기반이 되는 모델이기도 하하며 구조는 위와 같다. 3번의 반복으로도 앞의 모델보다 `Test Accuracy`에 향상이 나타나고, 그 이상 반복하면 `Validation Accuracy`는 1에 수렴한다. `X-ray classification`에서도 사용되는 모델이며, 흑백 이미지 분류에 많이 사용한다. 파라미터도 앞의 모델에 비해 많이 증가하지 않아 해당 모델을 최적 모형으로 선택한다.
 <br>
 
 {% highlight Python %}
@@ -430,6 +430,9 @@ from tensorflow.keras.utils import plot_model
 
 plot_model(model6, to_file='CNN6.png', show_shapes=True)
 {% endhighlight %}
+<br><br>
+
+특히 `Reduced Inception V3`를 이용하여 `Convolution1x1` 레이어를 이용하여 `dimension`을 줄여, `AlexNet`보다 `12배`만큼 적은 파라미터로 훈련하게 된다. 이를 최적 모형으로 선정했다.
 <br>
 
 피피티 디자인 저작권은 @PPTBIZCAM
