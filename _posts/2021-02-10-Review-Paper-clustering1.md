@@ -38,9 +38,10 @@ comments: true
 <br><br>
 
 <b> 추가2. Semi-Supervised Clustering에서 `Supervised`는 주어지는 정보는 어떤 점이 특정 클러스터에 속한다는 정보가 아니라, 같은 클러스터에 속하는 점과 서로 다른 클러스터에 속하는 점에 대한 정보이다. ~~생각해보면 클러스터에서는 1번, 2번 이런 식의 명명이 불가능하니 이런 방식으로 `Supervised`되는 것이 당연한데..~~
+<br><br><br><br>
 
 
-
+[출처] Jain, Anil K. "Data clustering: 50 years beyond K-means." Pattern recognition letters 31.8 (2010): 651-666.
 
 [paper-1]: https://www.sciencedirect.com/science/article/pii/S0167865509002323?via%3Dihub
 
