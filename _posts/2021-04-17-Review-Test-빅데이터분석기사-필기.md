@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Review/Test] 빅데이터분석기사 필기 합격 후기 / 2021 제 2회 빅분기 문제"
+title:  "[Review/Test] 빅데이터분석기사 필기 합격 후기 / 2021년 제 2회 빅분기 문제"
 date:   2021-04-17 12:20:17
 categories: [Other topics]
 comments: true

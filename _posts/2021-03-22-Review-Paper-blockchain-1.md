@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Review/Paper] 블록체인 논문 리뷰 3 with 개인정보 보호 규범"
+title:  "[Review/Paper] 블록체인 논문 리뷰 1 with 개인정보 보호 규범"
 date:   2021-03-22 21:25:40
 categories: [Other topics]
 comments: true
