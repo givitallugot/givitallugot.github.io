@@ -438,4 +438,4 @@ plot_model(model6, to_file='CNN6.png', show_shapes=True)
 피피티 디자인 저작권은 @PPTBIZCAM
 
 [kaggle-data]: https://www.kaggle.com/engesraahassan/covid19-ct-image
-[next-1]: http://localhost:4000/articles/2021-02/Project-COVID19-CT-Classfication-1
+[next-1]: https://givitallugot.github.io/articles/2021-02/Project-COVID19-CT-Classfication-1
