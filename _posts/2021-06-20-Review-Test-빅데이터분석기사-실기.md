@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Review/Test] 빅데이터분석기사 실기 합격 후기 / 소소한 잡담"
+title:  "[Review/Test] 빅데이터분석기사 실기 합격 후기"
 date:   2021-06-20 15:20:17
 categories: [Other topics]
 comments: true
