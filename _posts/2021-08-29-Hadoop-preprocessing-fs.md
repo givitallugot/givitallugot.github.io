@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Linux] 쉘 스크립트(Shell Script) 작성을 위한 기본 명령어 / "
+title:  "[Hadoop] 하둡 파일 시스템 (HDFS) 쉘 명령어 정리 / ls, mkdir, put, get, cat, mv, cp, rm, chmod, chown"
 date:   2021-08-28 16:29:26
 categories: [Engineering]
 comments: true
