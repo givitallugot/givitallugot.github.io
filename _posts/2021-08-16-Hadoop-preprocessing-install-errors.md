@@ -2,7 +2,7 @@
 layout: post
 title:  "[Hadoop] MAC OS M1(Big Sur)에서 하둡(Hadoop) 설치하기 / namenode 에러 java.net.ConnectException 및 .zshrc HADOOP PATH 설정"
 date:   2021-08-16 14:15:00
-categories: [Preprocessing]
+categories: [Engineering]
 comments: true
 ---
 <br>

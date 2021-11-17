@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "[Hadoop] 하둡 파일 시스템 (HDFS) 쉘 명령어 정리 / ls, mkdir, put, get, cat, mv, cp, rm, chmod, chown"
+title:  "[Linux] 쉘 스크립트(Shell Script) 작성을 위한 기본 명령어 / "
 date:   2021-08-28 16:29:26
-categories: [Preprocessing]
+categories: [Engineering]
 comments: true
 ---
 <br>
 
-하둡을 공부하며 알게된 파일 시스템 (HDFS) 쉘 명령어를 정리해보았다.
+리눅스 쉘 스크립팅의 기본적인 내용들을 정리해보았다.
 
 기본적인 HDFS의 파일을 조작하기 위해서 **hadoop fs** 또는 **hdfs dfs** 커맨드를 사용한다.
 ```bash
