@@ -1,17 +1,18 @@
 ---
 layout: post
-title:  "[Linux] 쉘 스크립트(Shell Script) 작성을 위한 기본 명령어 / ls, chmod, vi, cat, df du, env shebang"
+title:  "[Linux] 쉘 스크립트(Shell Script) 작성을 위한 기본 명령어 1 / ls, chmod, vi, cat, df du, env shebang"
 date:   2021-08-28 16:29:26
 categories: [Engineering]
 comments: true
 ---
 <br>
 
-하둡을 공부하며 알게된 파일 시스템 (HDFS) 쉘 명령어를 정리해보았다. 두서 없지만 그래도 정리하는 데에 의의를!
+리눅스 쉘 스크립팅을 위한 기본 명령어를 정리해보았다. 두서 없지만 그래도 정리하는 데에 의의를!
 
 
 ## ls
 디렉토리 확인을 위한 명령어로 -al 옵션을 추가하면 권한을 비롯한 자세한 정보를 볼 수 있다. 비슷한 명령어로 ll도 있다.
+
 ```bash
 ls -al
 ``` 
