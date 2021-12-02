@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Linux] 쉘 스크립트(Shell Script) 3 / 인자(args), 반복문(for), 조건문(if), 함수(function)"
+title:  "[Linux] 쉘 스크립트(Shell Script) 작성을 위한 기본 명령어 3/ 인자(args), 반복문(for), 조건문(if), 함수(function)"
 date:   2021-11-29 11:46:27
 categories: [Engineering]
 comments: true
