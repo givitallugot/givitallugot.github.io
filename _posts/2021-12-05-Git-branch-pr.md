@@ -18,6 +18,8 @@ comments: true
 git clone {repository 주소}
 ```
 
+<br>
+
 다음으로 코드가 수정되면, 이를 반영하기 위해서 다음과 같이 add, commit, push를 진행한다. 이때 push는 master에 하게 된다.
 
 ```bash
