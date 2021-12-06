@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Linux] 쉘 스크립트(Shell Script) 작성을 위한 기본 명령어 3/ 인자(args), 반복문(for), 조건문(if), 함수(function)"
+title:  "[Linux] 쉘 스크립트(Shell Script) 작성을 위한 기본 명령어 3 / 인자(args), 반복문(for), 조건문(if), 함수(function)"
 date:   2021-11-29 11:46:27
 categories: [Engineering]
 comments: true
@@ -21,6 +21,8 @@ run.sh 내부에서는 두 인자를 순서대로 $1, $2로 표현한다. 즉, �
 DATE = $1
 ``` 
 
+<br><br>
+
 ## 변수(variables)
 스크립트 내에서 여러번 사용할 변수를 지정하거나, path를 매번 사용하지 않고 위치를 저장하여 사용할 수 있다. 특정 이름으로 path를 지정할 때 export 명령어를 사용하면 된다. 이렇게 사용하면 재사용이 간편해진다.
 
@@ -33,6 +35,8 @@ export CODE_DIR=$HOME/code
 
 위와 같이 model 폴더에서 작업할 때 model/run.sh에서 code 폴더와 data 폴더에 접근할 필요가 있을 때, 다음과 같이 path를 설정하면 훨씬 가독성이 좋다.
 
+
+<br><br>
 
 ## 반복문(for)
 반복문의 기본 형식은 다음과 같다.
@@ -48,6 +52,8 @@ done
 
 action의 위치에서 반복할 내용을 입력하면 된다. 
 
+
+<br><br>
 
 ## 조건문(if)
 조건문의 기본 형식은 다음과 같다.
@@ -89,6 +95,8 @@ fi
 > [ 파일1 -ot 파일2 ]: 파일1이 파일2보다 과거 파일이면 참
 > [ 파일1 -ef 파일2 ]: 파일1이 파일2랑 같은 파일이면 참
 
+
+<br><br>
 
 ## 함수(function)
 스크립트 내에서도 function 등을 사용하여 일종의 모듈화를 진행할 수 있다.
