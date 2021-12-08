@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Linux] 협업을 위한 Git branch 및 Pull Request 생성 / Branch, PR"
+title:  "[Git] 협업을 위한 Git branch 및 Pull Request 생성 / Branch, PR"
 date:   2021-12-05 10:26:02
 categories: [Other topics]
 comments: true
