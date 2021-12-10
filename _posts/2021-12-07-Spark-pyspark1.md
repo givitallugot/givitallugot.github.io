@@ -2,7 +2,7 @@
 layout: post
 title:  "[Spark/pyspark] pyspark dataframe 읽기 및 저장 / spark.read.option.csv, wrtie.option.csv"
 date:   2021-12-07 12:36:08
-categories: [Preprocessing]
+categories: [Engineering]
 comments: true
 ---
 
@@ -56,6 +56,8 @@ df = spark.read.option("inferSchema", "true").csv("hdfs://user/test/content.csv"
 <br>
 
 추가적으로 만약 폴더 내의 모든 파일을 읽어야할 때는 다음과 같이 읽을 수 있다. 예를 들어 배치 파일을 읽거나 분산되어 저장된 파일을 읽을 때 자주 사용하게 된다.
+
+```pyspark
 df = spark.read.option("inferSchema", "true").csv("hdfs://user/test/*")
 ```
 
