@@ -25,14 +25,14 @@ spark = SparkSession(sc)
 
 이렇게 세션을 하나 생성한 후 하둡에 저장된 csv 파일에 대해서 다음과 같이 spark.read.csv으로 데이터를 로드한다. 
 
-```pyspark
+```python
 df = spark.read.csv("hdfs://user/test/content.csv")
 ```
 <br>
 
 데이터를 로드할 때 추가적으로 옵션들을 지정할 수 있다. 예를 들어 csv가 아니라 tsv 형태이거나 parquet 형태라면 다음과 같이 읽을 수 있다.
 
-```pyspark
+```python
 # To read TSV
 df = spark.read.option("delimiter", "\t").csv("hdfs://user/test/content.tsv")
 
@@ -43,21 +43,21 @@ df = spark.read.parquet("hdfs://user/test/content.parquet")
 
 또한 header가 있는 데이터를 읽을 때는 다음과 같이 설정할 수 있다.
 
-```pyspark
+```python
 df = spark.read.option("header", "true").csv("hdfs://user/test/content.csv")
 ```
 <br>
 
 기본적으로 데이터를 로드할 때 모두 컬럼을 string type으로 읽는다. 정수형이나 실수형 컬럼이 포함되어 있고 이를 자동으로 설정하고 싶을 때는 다음과 같이 inferSchema 옵션을 설정할 수 있다.
 
-```pyspark
+```python
 df = spark.read.option("inferSchema", "true").csv("hdfs://user/test/content.csv")
 ```
 <br>
 
 추가적으로 만약 폴더 내의 모든 파일을 읽어야할 때는 다음과 같이 읽을 수 있다. 예를 들어 배치 파일을 읽거나 분산되어 저장된 파일을 읽을 때 자주 사용하게 된다.
 
-```pyspark
+```python
 df = spark.read.option("inferSchema", "true").csv("hdfs://user/test/*")
 ```
 
@@ -68,28 +68,28 @@ df = spark.read.option("inferSchema", "true").csv("hdfs://user/test/*")
 
 데이터를 저장할 때는 write.csv를 이용한다. 저장은 result 폴더 내에 여러 압축된 형태의 분산된 파일들이 저장된다. 이는 앞에서 /* 형식으로 다시 읽을 수 있다.
 
-```pyspark
+```python
 df.write.csv("hdfs://user/test/result")
 ```
 <br>
 
 데이터 로드와 마찬가지로 여러가지 옵션을 줄 수 있다. tsv를 저장할 때는 다음과 같이 설정하면 된다.
 
-```pyspark
+```python
 df.write.option("delimiter", "\t").csv("hdfs://user/test/result")
 ```
 <br>
 
 또한 header를 함께 저장할 때는 다음과 같이 설정할 수 있다.
 
-```pyspark
+```python
 df.write.option("header", "true").csv("hdfs://user/test/result")
 ```
 <br>
 
 마지막으로 이미 데이터가 있더라도 덮어씌우고 싶을 때, 다음과 같이 mode를 설정하면 된다.
 
-```pyspark
+```python
 df.write.mode("overwrite").csv("hdfs://user/test/result")
 ```
 
