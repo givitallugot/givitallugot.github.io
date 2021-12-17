@@ -32,7 +32,7 @@ df = spark.createDataFrame(pdf)
 df.show()
 ```
 
-![1](/!contents_plot/2021-12-12-pyspark2-1.jpg){: width="50%"}
+![1](/!contents_plot/2021-12-12-pyspark2-1.jpg){: width="30%"}
 
 <br>
 <br>
@@ -72,7 +72,7 @@ pyspark dataframe에서 특정 컬럼을 선택할 때는 select 함수를 이�
 df.select('name', 'gender').show()
 ```
 
-![2](/!contents_plot/2021-12-12-pyspark2-2.jpg){: width="50%"}
+![2](/!contents_plot/2021-12-12-pyspark2-2.jpg){: width="30%"}
 
 <br>
 
@@ -82,7 +82,7 @@ df.select('name', 'gender').show()
 df.select(col('name').alias('NAME'), col('gender').alias('GENDER')).show() # col은 pyspark.sql.functions 내에 있는 함수
 ```
 
-![3](/!contents_plot/2021-12-12-pyspark2-3.jpg){: width="50%"}
+![3](/!contents_plot/2021-12-12-pyspark2-3.jpg){: width="30%"}
 
 <br>
 <br>
@@ -95,7 +95,7 @@ df.select(col('name').alias('NAME'), col('gender').alias('GENDER')).show() # col
 df.filter(df.gender=='m').show()
 ```
 
-![4](/!contents_plot/2021-12-12-pyspark2-4.jpg){: width="50%"}
+![4](/!contents_plot/2021-12-12-pyspark2-4.jpg){: width="30%"}
 
 <br>
 <br>
@@ -108,7 +108,7 @@ df.filter(df.gender=='m').show()
 df.orderBy('age', ascending=False).show()
 ```
 
-![5](/!contents_plot/2021-12-12-pyspark2-5.jpg){: width="50%"}
+![5](/!contents_plot/2021-12-12-pyspark2-5.jpg){: width="30%"}
 
 <br>
 <br>
@@ -122,7 +122,7 @@ for i in range(len(df.columns)):
     df = df.withColumnRenamed(df.columns[i], df.columns[i].upper())
 ```
 
-![6](/!contents_plot/2021-12-12-pyspark2-6.jpg){: width="50%"}
+![6](/!contents_plot/2021-12-12-pyspark2-6.jpg){: width="30%"}
 
 <br>
 <br>
@@ -135,7 +135,7 @@ for i in range(len(df.columns)):
 df.drop('AGE').show()
 ```
 
-![7](/!contents_plot/2021-12-12-pyspark2-7.jpg){: width="50%"}
+![7](/!contents_plot/2021-12-12-pyspark2-7.jpg){: width="30%"}
 
 <br>
 <br>
