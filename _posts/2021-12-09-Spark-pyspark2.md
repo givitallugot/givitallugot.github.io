@@ -72,7 +72,7 @@ pyspark dataframe에서 특정 컬럼을 선택할 때는 select 함수를 이�
 df.select('name', 'gender').show()
 ```
 
-![2](/!contents_plot/2021-12-12-pyspark2-2.jpg){: width="30%"}
+![2](/!contents_plot/2021-12-12-pyspark2-2.jpg){: width="20%"}
 
 <br>
 
@@ -82,7 +82,7 @@ df.select('name', 'gender').show()
 df.select(col('name').alias('NAME'), col('gender').alias('GENDER')).show() # col은 pyspark.sql.functions 내에 있는 함수
 ```
 
-![3](/!contents_plot/2021-12-12-pyspark2-3.jpg){: width="30%"}
+![3](/!contents_plot/2021-12-12-pyspark2-3.jpg){: width="20%"}
 
 <br>
 <br>
@@ -135,7 +135,7 @@ for i in range(len(df.columns)):
 df.drop('AGE').show()
 ```
 
-![7](/!contents_plot/2021-12-12-pyspark2-7.jpg){: width="30%"}
+![7](/!contents_plot/2021-12-12-pyspark2-7.jpg){: width="25%"}
 
 <br>
 <br>
