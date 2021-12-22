@@ -10,6 +10,8 @@ comments: true
 
 <br>
 
+## Pyspark Dataframe
+
 먼저 pyspark dataframe을 하나 준비했다. pandas에서 간단하게 생성하고 pyspark으로 변경했고 다음과 같은 형태이다.
 
 ```python
@@ -32,7 +34,7 @@ df = spark.createDataFrame(pdf)
 df.show()
 ```
 
-![1](/!contents_plot/2021-12-20-pyspark3-1.jpg){: width="30%"}
+![1](/!contents_plot/2021-12-20-pyspark3-1.jpg){: width="20%"}
 
 <br>
 <br>
@@ -45,7 +47,7 @@ groupBy 함수를 사용하여 country 별로 평균 나이를 계산해보았�
 df.groupBy(['country']).agg(avg('age')).show()
 ```
 
-![2](/!contents_plot/2021-12-20-pyspark3-2.jpg){: width="10%"}
+![2](/!contents_plot/2021-12-20-pyspark3-2.jpg){: width="20%"}
 
 <br>
 
@@ -55,14 +57,14 @@ df.groupBy(['country']).agg(avg('age')).show()
 df.groupBy(['country']).agg(max('age'), avg('age'), count('age')).show()
 ```
 
-![3](/!contents_plot/2021-12-20-pyspark3-3.jpg){: width="30%"}
+![3](/!contents_plot/2021-12-20-pyspark3-3.jpg){: width="35%"}
 
 <br>
 <br>
 
 ## partitionBy
 
-다음으로 파티션에 대해 정리한다. 쉽게 말해서 그룹의 경우 집약해서 데이터를 보여주는데, 이를 다시 펼치고 싶을 때 파티션을 사용한다. Windowing의 기능과 비슷한데 다음의 예시를 살펴보자.
+다음으로 파티션에 대해 정리한다. 쉽게 말해서 그룹의 경우 집약해서 데이터를 보여주는데, 이를 다시 펼치고 싶을 때 파티션을 사용한다. Windowing의 기능과 비슷하며, 다음의 예시를 살펴보자.
 
 <br>
 
@@ -101,20 +103,23 @@ from pyspark.sql.window import Window
 
 w = Window.partitionBy(['country', 'gender'])
 
-df.withColumn('names', collect_list('name').over(w)).groupBy(['country', 'gender']).agg(count('age'), max('names')).show()
+df.withColumn('names', collect_list('name').over(w)).\
+groupBy(['country', 'gender']).agg(count('age'), max('names')).show()
 ```
 
-![6](/!contents_plot/2021-12-20-pyspark3-6.jpg){: width="30%"}
+![6](/!contents_plot/2021-12-20-pyspark3-6.jpg){: width="40%"}
 
 <br>
 
-위의 dataframe에서 names를 list 형태가 아니라 string을 ','로 붙인 형태로 바꾸기 위해서는 다음과 같이 작성하면 된다.
+위의 dataframe에서 names를 list 형태가 아니라 string을 ','로 구분한 형태로 바꾸기 위해서는 다음과 같이 작성하면 된다.
 
 ```python
-df.withColumn('names', collect_list('name').over(w)).groupBy(['country', 'gender']).agg(count('age'), max('names')).withColumn('names', concat_ws(", ", 'max(names)')).show()
+df.withColumn('names', collect_list('name').over(w)).\
+groupBy(['country', 'gender']).agg(count('age'), max('names')).\
+withColumn('names', concat_ws(", ", 'max(names)')).show()
 ```
 
-![7](/!contents_plot/2021-12-20-pyspark3-7.jpg){: width="30%"}
+![7](/!contents_plot/2021-12-20-pyspark3-7.jpg){: width="45%"}
 
 <br>
 
@@ -122,7 +127,9 @@ df.withColumn('names', collect_list('name').over(w)).groupBy(['country', 'gender
 했다.
 
 ```python
-df.withColumn('names', collect_list('name').over(w)).groupBy(['country', 'gender']).agg(count('age'), max('names')).withColumn('names', concat_ws(", ", 'max(names)')).drop('max(names)').withColumnRenamed('count(age)', 'n').show()
+df.withColumn('names', collect_list('name').over(w)).\
+groupBy(['country', 'gender']).agg(count('age'), max('names')).\
+withColumn('names', concat_ws(", ", 'max(names)')).drop('max(names)').withColumnRenamed('count(age)', 'n').show()
 ```
 
 ![8](/!contents_plot/2021-12-20-pyspark3-8.jpg){: width="30%"}
