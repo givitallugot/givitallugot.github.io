@@ -123,8 +123,7 @@ withColumn('names', concat_ws(", ", 'max(names)')).show()
 
 <br>
 
-위의 과정들을 종합하여 dataframe을 깔끔하게 나타내보았다. country, gender 별로 해당하는 사람 수를 구하고 그때의 이름을 names 컬럼에 나열한 결과이다. 기존의 max(names) 컬럼은 삭제
-했다.
+위의 과정들을 종합하여 dataframe을 깔끔하게 나타내보았다. country, gender 별로 해당하는 사람 수를 구하고 그때의 이름을 names 컬럼에 나열한 결과이다. 기존의 max(names) 컬럼은 삭제했다.
 
 ```python
 df.withColumn('names', collect_list('name').over(w)).\
