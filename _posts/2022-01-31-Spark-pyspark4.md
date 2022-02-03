@@ -6,7 +6,7 @@ categories: [Preprocessing]
 comments: true
 ---
 
-이번 포스팅에서는 pyspark dataframe의 그룹, 파티션 내용을 정리해보았다.
+이번 포스팅에서는 pyspark dataframe의 pivot과 melt(unpivot)을 정리해보았다.
 
 <br>
 
