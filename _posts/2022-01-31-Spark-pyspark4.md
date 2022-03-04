@@ -43,7 +43,7 @@ df = spark.createDataFrame(pdf)
 df.show()
 ```
 
-![1](/!contents_plot/2022-01-31-pyspark4-1.jpg){: width="120%"}
+![1](/!contents_plot/2022-01-31-pyspark4-1.jpg){: width="80%"}
 
 <br>
 <br>
@@ -56,7 +56,7 @@ df.show()
 df.groupBy(['country']).agg(avg('age')).show()
 ```
 
-![2](/!contents_plot/2022-01-31-pyspark4-2.jpg){: width="40%"}
+![2](/!contents_plot/2022-01-31-pyspark4-2.jpg){: width="30%"}
 
 <br>
 
@@ -79,7 +79,7 @@ unpivotExpr = "stack(7, '2022-01-01', 2022-01-01, '2022-01-02', 2022-01-02, '202
 df.select("country", "gender", "age", expr(unpivotExpr)).show()
 ```
 
-![3](/!contents_plot/2022-01-31-pyspark4-3.jpg){: width="40%"}
+![3](/!contents_plot/2022-01-31-pyspark4-3.jpg){: width="30%"}
 
 <br>
 
@@ -100,4 +100,4 @@ short = long.groupBy("country", "gender", "age").pivot("date").sum("value")
 short.show()
 ```
 
-![4](/!contents_plot/2022-01-31-pyspark4-4.jpg){: width="120%"}
+![4](/!contents_plot/2022-01-31-pyspark4-4.jpg){: width="80%"}
