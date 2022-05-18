@@ -92,7 +92,7 @@ df.select("country", "gender", "age", expr(unpivotExpr)).show()
 
 다음으로 변경된 long format을 다시 short format으로 변경하는 방법이다. 이를 pivot 테이블이라고도 할 수 있으며 이는 하나의 컬럼의 값을 기준으로 여러 컬럼으로 만드는 것 파티션에 대해 정리하는 것을 의미한다. unpivot(melt)와 다르게 간단하게 변경할 수 있다.
 
-<brㄹ
+<br>
 
 ```python
 short = long.groupBy("country", "gender", "age").pivot("date").sum("value")
