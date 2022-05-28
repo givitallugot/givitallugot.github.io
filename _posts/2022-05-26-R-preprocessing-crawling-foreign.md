@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[R] / 외국인 채권 일별 거래량 거래대금 크롤링 한국거래소(KRX) 투자자별 거래실적 / httr, rvest, readr"
+title:  "[R] 외국인 채권 일별 거래량 거래대금 크롤링 한국거래소(KRX) 투자자별 거래실적 / httr, rvest, readr"
 date:   2022-05-26 11:50:42
 categories: [Preprocessing]
 comments: true
