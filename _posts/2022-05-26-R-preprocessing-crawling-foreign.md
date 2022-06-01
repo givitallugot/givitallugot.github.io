@@ -18,7 +18,7 @@ https://hyunyulhenry.github.io/quant_cookbook/%EA%B8%88%EC%9C%B5-%EB%8D%B0%EC%9D
 한국거래소(KRX)에서 기본 통계 > 채권 > 거래실적 > 투자자별 거래실적 으로 들어갑니다. 다음과 같은 화면을 확인할 수 있고, 조회기간 6개월을 누른다면 일별 데이터가 아니라 6개월 누적 데이터가 출력됩니다. 따라서 일별 거래실적을 구하기 위해서는 크롤링이 필요합니다.
 
 
-![1](/!contents_plot/2022-05-22-crawling1-1.jpg){: width="30%"}
+![1](/!contents_plot/2022-05-22-crawling1-1.jpg){: width="50%"}
 
 <br>
 <br>
@@ -27,9 +27,11 @@ https://hyunyulhenry.github.io/quant_cookbook/%EA%B8%88%EC%9C%B5-%EB%8D%B0%EC%9D
 
 다음으로 가장 중요한 크롤링 정보를 확인해보겠습니다. 먼저 개발자 도구를 열겠습니다. 맥에서 단축키는 command + option + i 입니다. 그리고 우측 상단에 다운로드 아이콘을 눌러서 데이터를 다운로드 받습니다. (저는 CSV로 다운받았습니다.) 이때 개발자 도구에 정보를 잘 확인해야 합니다.
 
-![2](/!contents_plot/2022-05-22-crawling1-2.jpg){: width="30%"}
+![2](/!contents_plot/2022-05-22-crawling1-2.jpg){: width="50%"}
 
 generate.cmd와 download.cmd가 Network 탭에 보입니다. 먼저 generate.cmd를 클릭하고 Headers에 들어가서 Request URL 정보를 기록해둡니다. 그리고 마찬가지로 download.cmd를 클릭하고 Header에 들어가서 Request URL 정보를 기록해둡니다.
+
+<br>
 
 generate.cmd Request URL: http://data.krx.co.kr/comm/fileDn/GenerateOTP/generate.cmd
 
@@ -38,17 +40,24 @@ download.cmd Request URL: http://data.krx.co.kr/comm/fileDn/download_csv/downloa
 <br>
 <br>
 
-![3](/!contents_plot/2022-05-22-crawling1-3.jpg){: width="30%"}
+![3](/!contents_plot/2022-05-22-crawling1-3.jpg){: width="50%"}
 
 다음은 Payload에 들어가서 정보를 기록해둡니다. 해당 정보들은 크롤링의 OTP 정보로 필요합니다.
 
 locale: ko_KR
+
 bndMktTpCd: TOT
+
 strtDd: 20211125 # 원하는 날짜료 변경
+
 endDd: 20220525 # 원하는 날짜로 변경
+
 money: 3
+
 csvxls_isNo: false
+
 name: fileDown
+
 url: dbms/MDC/STAT/standard/MDCSTAT10301
 
 <br>
@@ -92,9 +101,13 @@ get_data <- function(date){
 get_data("20210503")
 ```
 
-![4](/!contents_plot/2022-05-22-crawling1-4.jpg){: width="30%"}
+![4](/!contents_plot/2022-05-22-crawling1-4.jpg){: width="50%"}
+
+<br>
 
 데이터가 잘 들어온 것을 확인할 수 있습니다. 이제 일자를 변경해가며 for문을 이용해서 해당 함수를 여러번 수행하여 데이터셋을 만들어봅니다. 저는 외국인, 외국인기타 만 추출하고 그리고 외국인 + 외국인기타 인 합계를 추가했습니다. 그리고 데이터를 일자별로 축적할 BondByForeigner 테이블을 생성하여 각 행이 일자를 나타내도록 변경했습니다. 밑에 코드는 참고용으로 확인하시고, 필요에 맞게 변경해서 사용하시면 됩니다.
+
+<br>
 
 ```R
 start_date <- as.Date("2021-05-01") # 시작일
@@ -146,7 +159,11 @@ BondByForeignerTotal <- data.frame(날짜=c(), 투자자구분=c(), 거래량_�
 BondByForeignerTotal <- rbind(BondByForeignerTotal, BondByForeigner)
 ```
 
-![5](/!contents_plot/2022-05-22-crawling1-5.jpg){: width="30%"}
+<br>
+
+![5](/!contents_plot/2022-05-22-crawling1-5.jpg){: width="40%"}
+
+<br>
 
 결과 테이블은 위와 같습니다. for문에서 30일 반복 수행했을 때 매크로로 인식하는 것인지 더 이상 크롤링이 되지 않습니다. 그래서 tryCatch문으로 30번 반복마다 임의로 20초 정도 멈추도록 코드에 작성했습니다.
 
