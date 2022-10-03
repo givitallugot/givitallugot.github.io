@@ -10,6 +10,7 @@ comments: true
 한국거래소(KRX)에서 일별 외국인 채권 거래량 또는 거래대금을 크롤링하는 내용을 정리해보았습니다.
 
 (* 아래 잘 정리된 블로그 참고해서 다른 데이터 크롤링에 활용했습니다.)
+
 https://hyunyulhenry.github.io/quant_cookbook/%EA%B8%88%EC%9C%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91%ED%95%98%EA%B8%B0-%EA%B8%B0%EB%B3%B8.html
 
 
@@ -18,7 +19,7 @@ https://hyunyulhenry.github.io/quant_cookbook/%EA%B8%88%EC%9C%B5-%EB%8D%B0%EC%9D
 한국거래소(KRX)에서 기본 통계 > 채권 > 거래실적 > 투자자별 거래실적 으로 들어갑니다. 다음과 같은 화면을 확인할 수 있고, 조회기간 6개월을 누른다면 일별 데이터가 아니라 6개월 누적 데이터가 출력됩니다. 따라서 일별 거래실적을 구하기 위해서는 크롤링이 필요합니다.
 
 
-![1](/!contents_plot/2022-05-22-crawling1-1.jpg){: width="50%"}
+![1](/!contents_plot/2022-05-22-crawling1-1.jpg){: width="65%"}
 
 <br>
 <br>
@@ -27,7 +28,7 @@ https://hyunyulhenry.github.io/quant_cookbook/%EA%B8%88%EC%9C%B5-%EB%8D%B0%EC%9D
 
 다음으로 가장 중요한 크롤링 정보를 확인해보겠습니다. 먼저 개발자 도구를 열겠습니다. 맥에서 단축키는 command + option + i 입니다. 그리고 우측 상단에 다운로드 아이콘을 눌러서 데이터를 다운로드 받습니다. (저는 CSV로 다운받았습니다.) 이때 개발자 도구에 정보를 잘 확인해야 합니다.
 
-![2](/!contents_plot/2022-05-22-crawling1-2.jpg){: width="50%"}
+![2](/!contents_plot/2022-05-22-crawling1-2.jpg){: width="65%"}
 
 generate.cmd와 download.cmd가 Network 탭에 보입니다. 먼저 generate.cmd를 클릭하고 Headers에 들어가서 Request URL 정보를 기록해둡니다. 그리고 마찬가지로 download.cmd를 클릭하고 Header에 들어가서 Request URL 정보를 기록해둡니다.
 
@@ -40,7 +41,7 @@ download.cmd Request URL: http://data.krx.co.kr/comm/fileDn/download_csv/downloa
 <br>
 <br>
 
-![3](/!contents_plot/2022-05-22-crawling1-3.jpg){: width="50%"}
+![3](/!contents_plot/2022-05-22-crawling1-3.jpg){: width="65%"}
 
 다음은 Payload에 들어가서 정보를 기록해둡니다. 해당 정보들은 크롤링의 OTP 정보로 필요합니다.
 
