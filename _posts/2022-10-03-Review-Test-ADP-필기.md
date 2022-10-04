@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Review/Test] ADP 필기 합격 후기 / 제 26회 ADP 문제 복기"
-date:   2022-10-03 09:49:50
+date:   2022-10-02 09:49:50
 categories: [Other topics]
 comments: true
 ---

@@ -9,7 +9,7 @@ comments: true
 
 한국거래소(KRX)에서 일별 외국인 채권 거래량 또는 거래대금을 크롤링하는 내용을 정리해보았습니다.
 
-(* 아래 잘 정리된 블로그 참고해서 다른 데이터 크롤링에 활용했습니다.)
+(* 아래 잘 정리된 블로그 참고해서 다른 데이터 크롤링에 활용했습니다.)  
 
 https://hyunyulhenry.github.io/quant_cookbook/%EA%B8%88%EC%9C%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91%ED%95%98%EA%B8%B0-%EA%B8%B0%EB%B3%B8.html
 
