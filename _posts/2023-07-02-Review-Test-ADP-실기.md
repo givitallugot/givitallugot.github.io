@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "[Review/Test] ADP 실기 합격 후기 / 제 29회 ADP 문제 복기"
-date:   2023-07-02 01:26:50
+date:   2023-07-01 01:26:50
 categories: [Other topics]
-comments: true
+comments: trues
 ---
 <br>
 
